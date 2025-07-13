@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "editor.foldingStrategy": "indentation",
+  "editor.detectIndentation": false,
+  "editor.overtypeCursorStyle": "line",
+  "editor.cursorBlinking": "solid",
+  "editor.autoIndentOnPaste": true
+}
