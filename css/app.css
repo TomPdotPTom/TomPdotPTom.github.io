@@ -25,7 +25,7 @@ body{
     "abt abt abt abt abt abt abt pic pic pic pic pic"
     "skl skl skl skl skl skl skl skl skl skl skl skl"
     "slk slk slk slk slk slk slk slk slk slk slk slk"
-    "mov mov mov mov mov mov mov mov mov mov mov mov"
+    "myw myw myw myw myw myw myw myw myw myw myw myw"
     "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
 }
 
@@ -173,6 +173,15 @@ body{
       border-radius: 15px;
     }
   #myWork{
+    display: grid;
+    grid-area: myw;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 35px;
+    padding-left: 70px;
+    padding-bottom: 50px;
+    width:100%;
+    background:linear-gradient(to bottom,#010201b3,#1f1902);
+
   }
     #myWork>h1{
       font-family: "Anton", sans-serif;
@@ -180,7 +189,7 @@ body{
       font-style: normal;
       color: #000;
       text-decoration:underline;
-      font-size: 1.7em; 
+      font-size: 1.7em;
     }
   footer{
     display: grid;
