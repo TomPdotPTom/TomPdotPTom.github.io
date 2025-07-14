@@ -24,7 +24,7 @@ body{
     "abt abt abt abt abt abt abt pic pic pic pic pic"
     "abt abt abt abt abt abt abt pic pic pic pic pic"
     "skl skl skl skl skl skl skl skl skl skl skl skl"
-    "bks bks bks bks bks bks bks bks bks bks bks bks"
+    "slk slk slk slk slk slk slk slk slk slk slk slk"
     "mov mov mov mov mov mov mov mov mov mov mov mov"
     "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
 }
@@ -139,10 +139,25 @@ body{
   #skills{
     display: grid;
     grid-area: skl;
+    padding-bottom: 75px;
     width:100%;
     border: 1px solid #000;
-    background: #444;
-}
+   }
+  #skillsL{
+    display: grid;
+    grid-area: slk;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:200px 200px;
+    padding:0 55px;
+  }
+  .sLogo{
+    width:55%;
+    padding: 15px;
+    
+    border: 4px solid #000;
+    border-radius: 15px;
+  }
   #books{
     display: grid;
     grid-area: bks;
