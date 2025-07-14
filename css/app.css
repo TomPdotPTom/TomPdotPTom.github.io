@@ -7,6 +7,11 @@
 
 body{
   font-size: 1.3em;
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 250;
+  font-style: normal;
+  
 }
 #container{
   display:grid;
@@ -16,7 +21,8 @@ body{
   grid-template-areas:
     "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr"
     "nav nav nav nav nav nav nav nav nav nav nav nav"
-    "abt abt abt abt abt abt abt abt abt abt abt abt"
+    "abt abt abt abt abt abt abt pic pic pic pic pic"
+    "abt abt abt abt abt abt abt pic pic pic pic pic"
     "skl skl skl skl skl skl skl skl skl skl skl skl"
     "bks bks bks bks bks bks bks bks bks bks bks bks"
     "mov mov mov mov mov mov mov mov mov mov mov mov"
@@ -94,31 +100,42 @@ body{
   #about{
     display: grid;
     grid-area: abt;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 75px 75px 75px;
     width:100%;
-    padding-top:50px;
-    border: 1px solid #000;
-    background: #fff;
+    padding-top: 35px;
+    padding-left:35px;
+    padding-right: 70px;
+    background: #0b3602b3;
 }
-  #about>#aText{
-    width: 70%;
-}
-  #about>h1{
-  font-family: "Anton", sans-serif;
-  font-weight:50;
-  font-style: normal;
-  color: #000;
-  text-decoration:underline;
-  font-size: 1.7em;
-  }
-   #room{
-      
+
+    #about>h1{
+      display: block;
+      width: 100%;
+      font-family: "Anton", sans-serif;
+      font-weight:50;
+      font-style: normal;
+      color: #000;
+      text-decoration:underline;
+      font-size: 1.7em;
+     
+      padding-left:35px;
+    }
+    #about>p{
+      padding-left:35px;
+    }
+    #room{
       display:grid;
-      grid-area:abt ;
-     }
+      grid-area:pic;
+      grid-template-columns: repeat(1, 1fr);
+      background: #0b3602b3;
+      padding-top:70px;
+      }
     #roompic{
+      width: 90%;
       border: 3px solid #000;
       border-radius: 20px;
-    }
+      }
   #skills{
     display: grid;
     grid-area: skl;
