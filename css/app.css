@@ -80,7 +80,7 @@ body{
 #nav{
   display: grid;
   grid-area: nav;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   padding: 0 20%;
   width: 100%;
   height: 55px;
@@ -138,7 +138,6 @@ body{
     display: grid;
     grid-area: skl;
     grid-template-columns: repeat(1, 1fr);
-    
     padding: 35px;
     padding-left: 70px;
     padding-bottom: 50px;
@@ -160,29 +159,63 @@ body{
     grid-template-rows:200px 200px;
     padding:0 55px;
   }
-  .sLogo{
-    width:55%;
-    padding: 15px;
-    border: 4px solid #000;
-    border-radius: 15px;
+    .sLogo{
+      width:55%;
+      padding: 15px;
+      border: 4px solid #000;
+      border-radius: 15px;
+    }
+  #myWork{
   }
-  #books{
-    display: grid;
-    grid-area: bks;
-    width:100%;
-    border: 1px solid #000;
-     background: #666;
-}
-  #movies{
-    display: grid;
-    grid-area: mov;
-    width:100%;
-    border: 1px solid #000;
-     background: #777;
-}
+    #myWork>h1{
+      font-family: "Anton", sans-serif;
+      font-weight:50;
+      font-style: normal;
+      color: #000;
+      text-decoration:underline;
+      font-size: 1.7em; 
+    }
   footer{
     display: grid;
     grid-area: ftr;
     background: red;
     border: 1px solid #000;
+}
+
+/* /////////////////////////////////////////////// */
+/* //////////////// MEDIA QUERY ////////////////// */
+@media(max-width: 1030px)
+{
+  #header{
+      width: 100%;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      padding: 5px 20px;
+      text-align: justify;
+      justify-items: center;
+    }
+ 
+    #nav{
+      width: 75%;
+    }
+    #room{
+      display: grid;
+      grid-area: cas;
+      background: #f00;
+      padding-right: 10%;
+      padding-top: 50px;
+      background-image: linear-gradient(180deg, #555 0%, #666 35%, #666 100%);
+      justify-content: space-evenly;
+      grid-template-columns: repeat(2,300px);
+      grid-template-rows: repeat(3, 1fr); 
+    }
+  .skills{
+    display: grid;
+    width:75%;
+    border: 4px #000 solid;
+    border-radius: 15px;
+    margin: 15px;
+    background: #999;
+   } 
+  }
 }
