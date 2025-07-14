@@ -4,5 +4,7 @@
   "editor.detectIndentation": false,
   "editor.overtypeCursorStyle": "line",
   "editor.cursorBlinking": "solid",
-  "editor.autoIndentOnPaste": true
+  "editor.autoIndentOnPaste": true,
+  "editor.hover.delay": 5555,
+  "editor.hover.hidingDelay": 5555
 }
