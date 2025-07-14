@@ -184,38 +184,30 @@ body{
 
 /* /////////////////////////////////////////////// */
 /* //////////////// MEDIA QUERY ////////////////// */
-@media(max-width: 1030px)
+@media(max-width: 1080px)
 {
-  #header{
-      width: 100%;
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: repeat(1, 1fr);
-      padding: 5px 20px;
-      text-align: justify;
-      justify-items: center;
-    }
  
-    #nav{
-      width: 75%;
-    }
-    #room{
-      display: grid;
-      grid-area: cas;
-      background: #f00;
-      padding-right: 10%;
-      padding-top: 50px;
-      background-image: linear-gradient(180deg, #555 0%, #666 35%, #666 100%);
-      justify-content: space-evenly;
-      grid-template-columns: repeat(2,300px);
-      grid-template-rows: repeat(3, 1fr); 
-    }
-  .skills{
-    display: grid;
-    width:75%;
-    border: 4px #000 solid;
-    border-radius: 15px;
-    margin: 15px;
-    background: #999;
-   } 
+ 
+  #header>h1{
+    position: absolute;
+    width: 100%;
+    top: 200px;
+    margin: 0 auto;
+    text-align:center;
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 1em;
+}
+ 
+#nav>a{
+  font-family: "Anton", sans-serif;
+  font-weight:50;
+  font-style: normal;
+  color: #999;
+  text-decoration: none;
+  font-size: .9em;
   }
+  
 }
