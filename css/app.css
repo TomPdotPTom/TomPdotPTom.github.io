@@ -193,7 +193,7 @@ body{
       grid-area: ftr;
       grid-template-columns: 125px auto 125px;
       grid-template-rows: auto auto auto;
-      padding: 75px 35px;
+      padding: 50px 35px;
       text-align:center;
       background: #1f1902;
     }
