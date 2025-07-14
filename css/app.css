@@ -147,6 +147,7 @@ body{
     padding-left: 70px;
     padding-bottom: 50px;
     width:100%;
+    background:linear-gradient(to bottom,#0b3602b3,#020800b3);
   }
   #skills>h1{
     font-family: "Anton", sans-serif;
@@ -163,6 +164,7 @@ body{
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows:200px 200px;
     padding:0 55px;
+    background:linear-gradient(to bottom,#020800b3,#010201b3);
   }
     .sLogo{
       width:55%;
@@ -207,14 +209,14 @@ body{
 }
 #skillsL{
   grid-template-rows:150px 150px;
-  padding:0 5px;
+  padding:0 70px;
+  
 }
 
 .sLogo{
   width:65%;
   padding: 5px;
-  border: 4px solid #000;
-  border-radius: 15px;
+ 
 }  
 
 }
