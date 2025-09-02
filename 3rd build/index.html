@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Lighter, readable headline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/app.css" />
+  <title>Tom Pikula • Portfolio</title>
+</head>
+<body>
+  <div id="container">
+    <!-- Header -->
+    <header id="header" role="banner">
+      <h1 id="hTitle" class="title animate-title" aria-live="polite"></h1>
+
+      <!-- Images (move with labels) -->
+      <div id="img1-wrap" class="image-wrap">
+        <img id="img1" class="image" src="assets/images/matrix.png" alt="Matrix code rain" />
+        <span id="left" class="label" aria-hidden="true">left</span>
+      </div>
+      <div id="img2-wrap" class="image-wrap">
+        <img id="img2" class="image" src="assets/images/Cross.png" alt="Cross silhouette" />
+        <span id="right" class="label" aria-hidden="true">right</span>
+      </div>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav" aria-label="Primary">
+      <a href="#about">About Myself</a>
+      <a href="#skills">My Skills</a>
+      <a href="#myWork">My Work</a>
+    </nav>
+
+    <!-- About -->
+	<section id="about">
+    <div id="aboutText">
+      <h1 class="section-title">A Bit About Myself</h1>
+      <p>I've dedicated the greatest portion of my interest to learning the languages and interfaces that dictate internet communication—front-end and back-end development.</p>
+      <p>In my adult years I've grown into a man of faith, which gives me strength and perseverance—especially in my capacity to learn.</p>
+    </div>
+	
+    <!-- Feature image -->
+    <div id="room" >
+      <img id="roompic" src="assets/images/poss2.jpg" alt="Tom at a table" />
+    </div>
+	</section>
+	
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h1 class="section-title">Skills</h1>
+      <div class="skills-logos" aria-label="Skill logos">
+        <img class="sLogo" src="assets/images/HTML5logors.png" alt="HTML5" />
+        <img class="sLogo" src="assets/images/csslogors.png"  alt="CSS" />
+        <img class="sLogo" src="assets/images/jslogors.png"   alt="JavaScript" />
+        <img class="sLogo" src="assets/images/javalogors.png" alt="Java" />
+        <img class="sLogo" src="assets/images/vsclogors.png"  alt="VS Code" />
+        <img class="sLogo" src="assets/images/gitlogors.png"  alt="Git" />
+        <img class="sLogo" src="assets/images/figmalogors.png" alt="Figma" />
+        <img class="sLogo" src="assets/images/xdlogors.png"   alt="Adobe XD" />
+        <img class="sLogo" src="assets/images/PSlogors.png"   alt="Photoshop" />
+        <img class="sLogo" src="assets/images/illlogors.png"  alt="Illustrator" />
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="myWork" class="section">
+      <h1 class="section-title">My Work</h1>
+      <h2>to be posted</h2>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img id="fMatrix" src="assets/images/matrix.png" alt="" aria-hidden="true" />
+      <div id="fText">
+        <p>Developed by Tom Pikula</p>
+        <p>&copy; 2025. All rights reserved.</p>
+      </div>
+      <img id="fCross" src="assets/images/Cross.png" alt="" aria-hidden="true" />
+    </footer>
+  </div>
+
+  <script src="scripts/app.js" defer></script>
+</body>
+</html>

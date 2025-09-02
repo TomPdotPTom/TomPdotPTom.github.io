@@ -1,0 +1,184 @@
+/* ========= Theme & responsive knobs (some set by JS) ========= */
+:root{
+  --h1-size: clamp(20px, 2.6vw + 0.2rem, 34px);  /* smaller + fluid */
+  --h1-weight: 500;                               /* thinner headline */
+  --space: clamp(14px, 2.6vw, 28px);
+  --section-title: clamp(22px, 2.2vw + 8px, 38px);
+  --accent: #9fe870;             /* matrix green */
+  --gap: 7vw;                     /* REQUIRED horizontal gap next to title */
+
+  /* Image centers reported to CSS from JS. Start stacked at 50%/50%. */
+  --img-left-center: 50%;
+  --img-right-center: 50%;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Archivo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:#000;
+  color:#eee;
+  line-height:1.55;
+}
+
+#container{display:flex; flex-direction:column; min-height:100%; border: 2px solid red;}
+
+/* ================= Header ================= */
+#header{
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:65vh;
+  
+  padding:calc(var(--space)*2) var(--space);
+  overflow:hidden;
+  padding-bottom:10vh;
+  background:#000;
+  
+}
+
+
+/* Centered title that ALWAYS shows fully.
+   We DO NOT clip; we let it wrap across multiple lines.
+   max-width is the space between image centers minus the 7% gap on both sides. */
+.title{
+  margin:0;
+  font-family:"Archivo", sans-serif;
+  font-weight:var(--h1-weight);
+  font-size:var(--h1-size);
+  text-align:center;
+  line-height:1.25;
+  margin-inline:auto;
+  padding-inline:var(--gap); /* breathing room around text */
+
+  /* Stay centered; width never intrudes into the 7% protected space */
+  max-width: min(
+    72rem,
+    calc(100% - 2*var(--gap)),
+    calc((var(--img-right-center) - var(--img-left-center)) - 2*var(--gap))
+  );
+
+  /* Allow wrapping to ANY number of lines (no truncation) */
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.animate-title{
+  opacity:0; transform:translateY(8px);
+  animation:fadeUp .9s ease-out 1.2s forwards;
+}
+@keyframes fadeUp{to{opacity:1; transform:none}}
+
+/* ================= Images + labels ================= */
+.image-wrap{
+  position:absolute;
+  top:-200px;                  /* start above, then JS drops to 150px */
+  left:50%;
+  transform:translateX(-50%);  /* stacked & centered while descending */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  transition: top 800ms ease, left 800ms ease, transform 600ms ease;
+}
+.image{
+  width:min(30vmin, 200px);
+  height:auto;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.35));
+  pointer-events:none;
+  border: 1px solid #fff;
+}
+
+/* Labels only appear after split finishes */
+.label{
+  margin-top:10px;
+  color:var(--accent);
+  font-weight:700;
+  font-size:clamp(12px, 1.6vw, 18px);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(4px);
+  transition:opacity 300ms ease, transform 300ms ease, visibility 0ms linear 300ms;
+}
+.label.show{
+  opacity:1; visibility:visible; transform:none; transition:opacity 300ms ease, transform 300ms ease;
+}
+
+/* ================= Nav / Sections / Footer ================= */
+#nav{
+  position:sticky; top:0;
+  display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+  background:#111; padding:10px var(--space); z-index:5;
+  margin-bottom: 20vh;
+}
+#nav a{
+  color:#fff; text-decoration:none; font-weight:700;
+  padding:8px 14px; border-radius:999px; background:#1b1b1b;
+}
+#nav a:hover{background:#242424; color:var(--accent)}
+
+.section{padding:calc(var(--space)*2) var(--space); background:#000}
+.section + .section{border-top:1px solid #1f1f1f}
+.section-title{
+  font-family:"Archivo", sans-serif; font-weight:600;
+  color:var(--accent); font-size:var(--section-title);
+  margin:0 0 var(--space);
+}
+
+#about{
+	position: relative;
+	width: 100%;
+	padding-left: 5%;
+}
+
+#aboutText{
+	float: left;
+	width: 55%;
+	padding-bottom: 10vh;
+}
+
+#roompic{
+	position: relative;
+	float: right;
+	width: 35%;
+	padding-right: 5%;
+}
+
+#skills{
+	clear: both;
+}
+
+
+
+//	.media{display:grid; place-items:center; background:#0e0e0e}
+//	#roompic{width:min(100%, 1200px);
+		height:auto;
+		border-radius:14px;
+		display:block;
+	box-shadow:0 10px 24px rgba(0,0,0,.35)}
+
+.skills-logos{display:grid; grid-template-columns:repeat(auto-fit, minmax(84px, 1fr)); gap:38px}
+.sLogo{width:100%;
+	height:auto;
+	object-fit:contain;
+	background:#111;
+	border-radius:10px;
+	}
+
+.footer{
+  margin-top:auto; display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
+  gap:14px; padding:20px var(--space); background:#111; color:#eee;
+}
+#fMatrix,#fCross{width:40px; height:auto; opacity:.65}
+#fText{text-align:center; font-size:24px}
+
+/* ================= Responsive tweaks ================= */
+@media (min-width: 900px){
+  #header{min-height:72vh}
+  .image{width:min(26vmin, 260px)}
+}
+@media (max-width: 520px){
+  #header{padding-top:calc(var(--space)*2.5)}
+  #nav{gap:8px}
+}
